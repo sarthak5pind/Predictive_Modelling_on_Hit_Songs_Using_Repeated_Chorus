@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    
+
+        
+    <head>
+        <meta charset="UTF-8">
+        <title>Music Prediction by Sarthak</title>
+    </head>
+    <br><br><br><br><br><br><br>
+    <body bgcolor=#6756gh>
+        <center>
+            <div class="login">
+                <h1>Music Prediction</h1>
+
+                <!-- Main Input For Receiving Query to our ML -->
+                <form action="{{ url_for('predict')}}"method="post">
+                    <input type="text" name="song_link" size="100" width="100" placeholder="song_link" required="required" />
+
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                </form>
+
+            <br>
+            <br>
+            {{ prediction_text }}
+            </div>
+        </center>
+    </body>
+</html>
